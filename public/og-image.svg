@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f1f5f9"/>
+  <circle cx="1000" cy="100" r="220" fill="#0ea5e922"/>
+  <circle cx="150" cy="560" r="200" fill="#10b98122"/>
+  <g transform="translate(100,160)">
+    <text x="0" y="0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" fill="#0f172a" font-weight="700">
+      Comunidad Bahá’í de Valladolid
+    </text>
+    <text x="0" y="70" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" fill="#334155">
+      Unidad, servicio y crecimiento espiritual
+    </text>
+    <text x="0" y="140" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" fill="#334155">
+      Calle Juan García Hortelano 43 · valladolid@bahai.es · +34 657 683 224
+    </text>
+  </g>
+  <g transform="translate(940,420)">
+    <path d="M32 10l7 12h-14l7-12zm0 44l-7-12h14l-7 12zm22-22l-12 7V23l12 7zM10 32l12-7v14l-12-7z" fill="url(#g)"/>
+  </g>
+</svg>

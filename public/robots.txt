@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bahai-valladolid.vercel.app/sitemap.xml
