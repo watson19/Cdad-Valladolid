@@ -63,18 +63,24 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* Hero con foto local */}
       <section id="inicio" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-sky-200/40 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-emerald-200/40 blur-3xl" />
+          <img
+            src="/images/hero.jpg"
+            alt="Personas caminando en comunidad"
+            className="h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 hero-overlay" />
         </div>
-        <div className="mx-auto max-w-6xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-slate-900">
+
+        <div className="mx-auto max-w-6xl px-4 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
+          <div className="text-white">
+            <span className="badge">Comunidad Bahá’í</span>
+            <h1 className="hero-title mt-3 text-4xl md:text-5xl font-semibold leading-tight">
               Unidad, servicio y crecimiento espiritual en Valladolid
             </h1>
-            <p className="mt-4 text-lg text-slate-700 max-w-prose">
+            <p className="hero-sub mt-4 text-lg max-w-prose text-slate-100/90">
               La Comunidad Bahá’í de Valladolid participa en un proceso mundial de
               construcción de comunidad que fomenta la <strong>unidad</strong>, la
               <strong> justicia</strong> y el <strong>mejoramiento del mundo</strong>.
@@ -104,36 +110,73 @@ export default function App() {
       </section>
 
       {/* Quiénes somos */}
-      <section id="quienes" className="mx-auto max-w-6xl px-4 py-16">
+      <section id="quienes" className="mx-auto max-w-6xl px-4 section-pad">
         <h2 className="text-3xl font-semibold">¿Quiénes somos?</h2>
-        <p className="mt-4 max-w-3xl text-slate-700">
-          Somos vecinas y vecinos de Valladolid que, inspirados por las enseñanzas de Bahá’u’lláh,
-          colaboramos con amistades, familias e instituciones en el fortalecimiento del tejido
-          social. Nuestra comunidad está abierta a todas las personas, independientemente de sus
-          creencias o trasfondo. Nos reúne la convicción de que cada ser humano puede contribuir
-          al progreso espiritual y material de la sociedad.
-        </p>
+        <div className="mt-6 grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
+          <p className="max-w-prose text-slate-700">
+            Somos vecinas y vecinos de Valladolid que, inspirados por las enseñanzas de Bahá’u’lláh,
+            colaboramos con amistades, familias e instituciones en el fortalecimiento del tejido
+            social. Nuestra comunidad está abierta a todas las personas, independientemente de sus
+            creencias o trasfondo. Nos reúne la convicción de que cada ser humano puede contribuir
+            al progreso espiritual y material de la sociedad.
+          </p>
+          <div className="card overflow-hidden">
+            <img src="/images/community.jpg" alt="Reunión comunitaria" className="w-full h-56 object-cover"/>
+          </div>
+        </div>
       </section>
 
-      {/* Actividades */}
-      <section id="actividades" className="bg-slate-50 border-y border-slate-200/70">
-        <div className="mx-auto max-w-6xl px-4 py-16">
+      {/* Cita inspiradora */}
+      <section className="bg-slate-50 border-y border-slate-200/70">
+        <div className="mx-auto max-w-6xl px-4 section-pad text-center">
+          <blockquote className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto italic">
+            “Considerad al hombre como una mina rica en gemas de valor inestimable. La educación tan sólo puede hacerle revelar sus tesoros
+            y permitir a la humanidad beneficiarse de ellos.”
+          </blockquote>
+          <div className="mt-3 text-slate-500">— Bahá’u’lláh</div>
+        </div>
+      </section>
+
+      {/* Actividades con fotos locales */}
+      <section id="actividades" className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 section-pad">
           <h2 className="text-3xl font-semibold">Actividades en Valladolid</h2>
           <p className="mt-4 max-w-3xl text-slate-700">
             Las actividades se realizan en hogares, en el Centro Bahá’í y en distintos barrios.
             Son espacios de aprendizaje y servicio, abiertos y sin coste.
           </p>
+
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ActivityCard title="Reuniones devocionales" icon={<SparkIcon />} desc="Encuentros de oración y reflexión para fortalecer el espíritu y la unidad." />
-            <ActivityCard title="Clases para niñas y niños" icon={<BookIcon />} desc="Desarrollo de cualidades espirituales y sentido de servicio a la comunidad." />
-            <ActivityCard title="Grupos prejuveniles" icon={<SeedIcon />} desc="Adolescentes que exploran temas significativos y emprenden proyectos de servicio." />
-            <ActivityCard title="Círculos de estudio" icon={<StudyIcon />} desc="Procesos colaborativos de estudio y acción para transformar el entorno." />
+            <ActivityCard
+              title="Reuniones devocionales"
+              icon={<SparkIcon />}
+              desc="Encuentros de oración y reflexión para fortalecer el espíritu y la unidad."
+              image="/images/devotional.jpg"
+            />
+            <ActivityCard
+              title="Clases para niñas y niños"
+              icon={<BookIcon />}
+              desc="Desarrollo de cualidades espirituales y sentido de servicio a la comunidad."
+              image="/images/children.jpg"
+            />
+            <ActivityCard
+              title="Grupos prejuveniles"
+              icon={<SeedIcon />}
+              desc="Adolescentes que exploran temas significativos y emprenden proyectos de servicio."
+              image="/images/junior-youth.jpg"
+            />
+            <ActivityCard
+              title="Círculos de estudio"
+              icon={<StudyIcon />}
+              desc="Procesos colaborativos de estudio y acción para transformar el entorno."
+              image="/images/study-circle.jpg"
+            />
           </div>
         </div>
       </section>
 
       {/* Contacto / Formulario */}
-      <section id="contacto" className="mx-auto max-w-6xl px-4 py-16">
+      <section id="contacto" className="mx-auto max-w-6xl px-4 section-pad">
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-3xl font-semibold">Deseo recibir más información</h2>
@@ -177,7 +220,7 @@ export default function App() {
           </div>
 
           {/* Datos de contacto rápidos */}
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <div className="card p-6">
             <h3 className="text-xl font-semibold">Contacto directo</h3>
             <ul className="mt-4 space-y-3 text-slate-700">
               <li className="flex items-start gap-3">
@@ -210,7 +253,7 @@ export default function App() {
 
       {/* Dónde estamos / Mapa */}
       <section id="donde" className="bg-slate-50 border-t border-slate-200/70">
-        <div className="mx-auto max-w-6xl px-4 py-16">
+        <div className="mx-auto max-w-6xl px-4 section-pad">
           <h2 className="text-3xl font-semibold">¿Dónde estamos?</h2>
           <p className="mt-3 text-slate-700">Calle Juan García Hortelano 43, Valladolid</p>
           <div className="mt-6 overflow-hidden rounded-2xl shadow ring-1 ring-slate-200">
@@ -276,7 +319,7 @@ function Field({ label, htmlFor, children }) {
 
 function FeatureCard({ title, items, cta }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm">
+    <div className="card p-6 md:p-7">
       <h3 className="text-xl font-semibold">{title}</h3>
       <ul className="mt-4 space-y-3 text-slate-700">
         {items.map((it, i) => (
@@ -293,14 +336,17 @@ function FeatureCard({ title, items, cta }) {
   );
 }
 
-function ActivityCard({ title, icon, desc }) {
+function ActivityCard({ title, icon, desc, image }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="flex items-center gap-3">
-        <div className="shrink-0">{icon}</div>
-        <h3 className="text-lg font-semibold">{title}</h3>
+    <div className="card overflow-hidden">
+      <img src={image} alt={title} className="w-full h-36 object-cover" />
+      <div className="p-5">
+        <div className="flex items-center gap-3">
+          <div className="shrink-0">{icon}</div>
+          <h3 className="text-lg font-semibold">{title}</h3>
+        </div>
+        <p className="mt-2 text-slate-700">{desc}</p>
       </div>
-      <p className="mt-2 text-slate-700">{desc}</p>
     </div>
   );
 }
