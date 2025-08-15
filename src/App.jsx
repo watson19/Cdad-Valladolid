@@ -75,7 +75,7 @@ export default function App() {
         </div>
 
         <div className="mx-auto max-w-6xl px-4 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
-          <div className="text-white">
+          
             <span className="badge">Comunidad Bahá’í</span>
             <h1 className="hero-title mt-3 text-4xl md:text-5xl font-semibold leading-tight">
               Unidad, servicio y crecimiento espiritual en Valladolid
@@ -93,7 +93,7 @@ export default function App() {
               <a href="#actividades" className="inline-flex items-center rounded-xl px-5 py-3 bg-white border border-slate-300 text-slate-800 hover:bg-slate-50 transition">
                 Ver actividades
               </a>
-            </div>
+            
           </div>
           <div className="md:pl-6">
             <FeatureCard
